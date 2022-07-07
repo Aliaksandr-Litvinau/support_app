@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Ticket, TicketMessage
+
+admin.site.register(Ticket)
+admin.site.register(TicketMessage)
