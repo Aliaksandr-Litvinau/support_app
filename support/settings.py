@@ -150,3 +150,9 @@ CELERY_BROKER_URL = 'redis://0.0.0.0:6379/0'
 CELERY_RESULT_BACKEND = 'redis://0.0.0.0:6379/0'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_LOGIN = 'litvinaualex@gmail.com'
+EMAIL_PASSWORD = '19911992Kursant'
+EMAIL_USE_TLS = True
