@@ -3,7 +3,7 @@ from rest_framework.permissions import BasePermission
 
 class IsNotAuthenticated(BasePermission):
     """
-    Разрешить доступ лишь тем, кто не авторизован
+    Allow access only to those who are not authorized
     """
 
     def has_permission(self, request, view):
@@ -12,7 +12,7 @@ class IsNotAuthenticated(BasePermission):
 
 class IsSupportUser(BasePermission):
     """
-    Разрешить доступ сотруднику поддержки
+    Allow access to a support employee
     """
 
     def has_permission(self, request, view):

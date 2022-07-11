@@ -8,7 +8,7 @@ from .serializers import UserSerializer
 
 class UserList(generics.ListAPIView):
     """
-    Просмотр всех имеющихся пользователей для суперюзера и сотрудника поддержки
+    View all available users for a superuser and a support employee.
     """
 
     queryset = User.objects.all()
@@ -18,7 +18,7 @@ class UserList(generics.ListAPIView):
 
 class UserCreate(generics.CreateAPIView):
     """
-    Регистрация пользователей лишь для неавторизованных и суперюзера
+    User registration is only for unauthorized and superuser.
     """
 
     serializer_class = UserSerializer
@@ -27,8 +27,8 @@ class UserCreate(generics.CreateAPIView):
 
 class UserRetrieve(generics.RetrieveAPIView):
     """
-    Получить информацию о конкретном пользователе.
-    Доступно для суперюзера и сотрудника поддержки
+    Get information about a specific user.
+    Available for superuser and support staff.
     """
 
     queryset = User.objects.all()

@@ -11,7 +11,7 @@ from .serializers import (TicketMessageSerializer, TicketSerializer,
 
 class TicketCreate(generics.CreateAPIView):
     """
-    Создание новой заявки. Доступ имеет каждый авторизованный пользователь
+    Creating a new ticket. Every authorized user has access.
     """
 
     serializer_class = TicketSerializer
@@ -24,8 +24,8 @@ class TicketCreate(generics.CreateAPIView):
 
 class TicketList(generics.ListAPIView):
     """
-    Получение всех заявок. Все заявки видит лишь сотрудник
-    поддержки, а обычный пользователь лишь свои
+    Getting all tickets.
+    All tickets are seen only by a support employee, and a regular user only sees his own.
     """
 
     serializer_class = TicketSerializer
@@ -40,8 +40,8 @@ class TicketList(generics.ListAPIView):
 
 class TicketRetrieve(generics.RetrieveDestroyAPIView):
     """
-    Получение конкретной заявки, а также удаление.
-    Пользователь имеет доступ лишь к своей, а сотрудник к любой.
+    Getting a specific ticket, as well as deleting it.
+    The user has access only to his own, and the employee has access to everyone.
     """
 
     serializer_class = TicketSerializer
@@ -56,7 +56,7 @@ class TicketRetrieve(generics.RetrieveDestroyAPIView):
 
 class TicketUpdate(generics.UpdateAPIView):
     """
-    Обновление только статуса заявки
+    Updating only the ticket status.
     """
 
     serializer_class = TicketUpdateSerializer
@@ -71,8 +71,8 @@ class TicketUpdate(generics.UpdateAPIView):
 
 class TicketMessageCreate(generics.CreateAPIView):
     """
-    Создание сообщения в существующей заявке. Сотрудник имеет возможность
-    записи в любую заявку, пользователь - в свою.
+    Creating a message in an existing ticket.
+    The employee has the ability to write to any ticket, the user only to his own.
     """
 
     serializer_class = TicketMessageSerializer

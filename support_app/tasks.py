@@ -10,7 +10,7 @@ from support.settings import EMAIL_LOGIN
 @shared_task
 def send_mail_change_status(email: str, ticket_id: int):
     """
-    Отправка сообщения на email о том, что статус тикета был изменён
+    Sending an email message that the ticket status has been changed
     """
 
     smtp_obj = smtplib.SMTP_SSL(EMAIL_HOST, smtplib.SMTP_PORT)
