@@ -2,9 +2,9 @@ import smtplib
 
 from celery import shared_task
 
-from support.settings import EMAIL_HOST
-from support.settings import EMAIL_PASSWORD
-from support.settings import EMAIL_LOGIN
+from backend.support import EMAIL_HOST
+from backend.support import EMAIL_PASSWORD
+from backend.support import EMAIL_LOGIN
 
 
 @shared_task

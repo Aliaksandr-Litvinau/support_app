@@ -2,7 +2,7 @@ from rest_framework import generics
 from rest_framework.exceptions import ValidationError
 from rest_framework.permissions import IsAuthenticated
 
-from user.models import User
+from backend.user.models import User
 
 from .models import Ticket
 from .serializers import (TicketMessageSerializer, TicketSerializer,

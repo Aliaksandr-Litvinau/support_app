@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "support"
+version = "0.1.0"
+description = ""
+authors = ["litvinau_alex <litvinaualex@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+celery = "celery==5.2.7"
+djangorestframework = "3.13.1"
+djangorestframework-jwt = "1.11.0"
+djangorestframework-simplejwt = "5.2.0"
+psycopg2-binary = "2.9.3"
+PyJWT = "1.7.1"
+redis = "4.3.4"
+requests = "2.28.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
