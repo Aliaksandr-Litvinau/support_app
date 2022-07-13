@@ -1,9 +1,10 @@
 from django.urls import path
 
-from views import (TicketCreate, TicketList, TicketMessageCreate,
-                   TicketRetrieve, TicketUpdate)
+from support_app.views import (TicketCreate, TicketList, TicketMessageCreate,
+                               TicketRetrieve, TicketUpdate)
 
 urlpatterns = [
+    path('', TicketList.as_view()),
     path('create', TicketCreate.as_view()),
     path('all', TicketList.as_view()),
     path('<int:pk>', TicketRetrieve.as_view()),

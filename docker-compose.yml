@@ -11,7 +11,9 @@ services:
       - ./:/docker-compose.yml
     ports:
       - "8000:8000"
-#    command: sh -c "python3 manage.py migrate & python3 manage.py runserver 0.0.0.0:8000"
+    command: bash -x "python3 manage.py migrate --noinput || exit 1 &&
+                    python3 manage.py createsuperuser --noinput &&
+                    python3 manage.py runserver 0.0.0.0:[8000]"
     env_file:
       - .env.example
     depends_on:
