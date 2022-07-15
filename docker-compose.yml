@@ -6,14 +6,12 @@ services:
     build:
       context: .
       dockerfile: django_docker_file
+    entrypoint: /docker-entrypoint.sh
     container_name: support_app
     volumes:
       - ./:/docker-compose.yml
     ports:
       - "8000:8000"
-    command: bash -x "python3 manage.py migrate --noinput || exit 1 &&
-                    python3 manage.py createsuperuser --noinput &&
-                    python3 manage.py runserver 0.0.0.0:[8000]"
     env_file:
       - .env.example
     depends_on:
