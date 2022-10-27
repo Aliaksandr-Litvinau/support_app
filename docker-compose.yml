@@ -5,7 +5,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: django_docker_file
+      dockerfile: Dockerfile
     entrypoint: /docker-entrypoint.sh
     container_name: support_app
     volumes:
@@ -43,7 +43,7 @@ services:
   celery:
     build:
       context: .
-      dockerfile: django_docker_file
+      dockerfile: Dockerfile
     container_name: support_celery
     volumes:
       - ./support:/support
